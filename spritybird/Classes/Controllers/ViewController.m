@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Scene.h"
 #import "Score.h"
+#import <SkillzSDK-iOS/Skillz.h>
 
 @interface ViewController ()
 @property (weak,nonatomic) IBOutlet SKView * gameView;
@@ -46,6 +47,13 @@
     self.gameOverView.transform = CGAffineTransformMakeScale(.9, .9);
     [self.gameView presentScene:scene];
     
+    // Automatically launch Skillz
+    [[Skillz skillzInstance] launchSkillzForOrientation:SkillzPortrait
+                                     launchHasCompleted:nil
+                                    tournamentWillBegin:^(NSDictionary *matchRules) {
+                                        [scene startGame];
+                                    }
+                                         skillzWillExit:nil];
 }
 
 

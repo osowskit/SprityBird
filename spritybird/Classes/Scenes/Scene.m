@@ -10,6 +10,7 @@
 #import "SKScrollingNode.h"
 #import "BirdNode.h"
 #import "Score.h"
+#import <SkillzSDK-iOS/Skillz.h>
 
 #define BACK_SCROLLING_SPEED .5
 #define FLOOR_SCROLLING_SPEED 3
@@ -36,7 +37,6 @@ static bool wasted = NO;
 - (id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         self.physicsWorld.contactDelegate = self;
-        [self startGame];
     }
     return self;
 }
@@ -250,6 +250,16 @@ static bool wasted = NO;
 
     wasted = true;
     [Score registerScore:self.score];
+    
+    // if we are in a Skillz tournament
+    if ([[Skillz skillzInstance] tournamentIsInProgress]) {
+        // report a score to Skillz
+        // NOTE: @(self.score) converts the NSInteger to NSNumber needed by the
+        // api
+        [[Skillz skillzInstance] displayTournamentResultsWithScore:@(self.score)
+                                                    andScoreExtras:nil
+                                                    withCompletion:nil];
+    }
     
     if([self.delegate respondsToSelector:@selector(eventWasted)]){
         [self.delegate eventWasted];

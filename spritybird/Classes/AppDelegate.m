@@ -7,11 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import <SkillzSDK-iOS/Skillz.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // General Skillz initialization
+    // Id is given to us by the devportal
+    [[Skillz skillzInstance] skillzInitForGameId:@"777"
+                                     environment:SkillzSandbox];
     
     return YES;
 }
