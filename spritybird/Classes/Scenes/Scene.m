@@ -141,18 +141,29 @@ static bool wasted = NO;
 #pragma mark - Interaction 
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    if(wasted){
-        [self startGame];
-    }else{
-        if (!bird.physicsBody) {
-            [bird startPlaying];
-            if([self.delegate respondsToSelector:@selector(eventPlay)]){
-                [self.delegate eventPlay];
-            }
+    if (wasted) {
+        // if we are in a Skillz tournament
+        if ([[Skillz skillzInstance] tournamentIsInProgress]) {
+            // report a score to Skillz
+            // NOTE: @(self.score) converts the NSInteger to NSNumber needed by the
+            // api
+            [[Skillz skillzInstance] displayTournamentResultsWithScore:@(self.score)
+                                                        andScoreExtras:nil
+                                                        withCompletion:nil];
+        } else {
+            // Legacy for non-Skillz interactions
+            [self startGame];
         }
-        [bird bounce];
+        return;
     }
+    
+    if (!bird.physicsBody) {
+        [bird startPlaying];
+        if([self.delegate respondsToSelector:@selector(eventPlay)]){
+            [self.delegate eventPlay];
+        }
+    }
+    [bird bounce];
 }
 
 #pragma mark - Update & Core logic
@@ -250,17 +261,7 @@ static bool wasted = NO;
 
     wasted = true;
     [Score registerScore:self.score];
-    
-    // if we are in a Skillz tournament
-    if ([[Skillz skillzInstance] tournamentIsInProgress]) {
-        // report a score to Skillz
-        // NOTE: @(self.score) converts the NSInteger to NSNumber needed by the
-        // api
-        [[Skillz skillzInstance] displayTournamentResultsWithScore:@(self.score)
-                                                    andScoreExtras:nil
-                                                    withCompletion:nil];
-    }
-    
+
     if([self.delegate respondsToSelector:@selector(eventWasted)]){
         [self.delegate eventWasted];
     }
