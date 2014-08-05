@@ -11,6 +11,6 @@
 @interface Math : NSObject
 
 + (void) setRandomSeed:(unsigned int) seed;
-+ (float) randomFloatBetween:(float) min and:(float) max;
++ (float) randomFloatBetween:(int) min and:(int) max;
 
 @end

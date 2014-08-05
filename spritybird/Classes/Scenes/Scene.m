@@ -202,8 +202,8 @@ static bool wasted = NO;
 - (void) place:(SKSpriteNode *) bottomPipe and:(SKSpriteNode *) topPipe atX:(float) xPos
 {
     // Maths
-    float availableSpace = HEIGHT(self) - HEIGHT(floor);
-    float maxVariance = availableSpace - (2*OBSTACLE_MIN_HEIGHT) - VERTICAL_GAP_SIZE;
+    int availableSpace = HEIGHT(self) - HEIGHT(floor);
+    int maxVariance = availableSpace - (2*OBSTACLE_MIN_HEIGHT) - VERTICAL_GAP_SIZE;
     float variance = [Math randomFloatBetween:0 and:maxVariance];
     
     // Bottom pipe placement
