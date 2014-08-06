@@ -13,10 +13,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Set the enviroment based on the build type
+#ifdef DEBUG
+    SkillzEnvironment skillzEnv = SkillzSandbox;
+#else
+    SkillzEnvironment skillzEnv = SkillzProduction;
+#endif
+    
     // General Skillz initialization
     // Id is given to us by the devportal
     [[Skillz skillzInstance] skillzInitForGameId:@"777"
-                                     environment:SkillzSandbox];
+                                     environment:skillzEnv];
     
     return YES;
 }
