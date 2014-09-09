@@ -42,12 +42,6 @@
     scene.scaleMode = SKSceneScaleModeAspectFill;
     scene.delegate = self;
     
-    // hide the scene until its told to show
-    scene.view.hidden = true;
-    scene.view.alpha = 0;
-
-    [scene startGame];
-    
     // Present the scene
     self.gameOverView.alpha = 0;
     self.gameOverView.transform = CGAffineTransformMakeScale(.9, .9);
@@ -57,10 +51,6 @@
     [[Skillz skillzInstance] launchSkillzForOrientation:SkillzPortrait
                                      launchHasCompleted:nil
                                     tournamentWillBegin:^(NSDictionary *matchRules) {
-                                        // reveal the view
-                                        self.view.alpha = 1;
-                                        self.view.hidden = false;
-                                        
                                         [scene startGame];
                                     }
                                          skillzWillExit:nil];
@@ -92,6 +82,10 @@
     [UIView animateWithDuration:.5 animations:^{
         self.getReadyView.alpha = 0;
     }];
+
+    // hack to avoid problems with game view on a device
+    flash = [[UIView alloc] initWithFrame:self.view.frame];
+    [self.gameView insertSubview:flash belowSubview:self.getReadyView];
 }
 
 - (void)eventWasted

@@ -46,10 +46,6 @@ static bool wasted = NO;
     // Reinit
     wasted = NO;
     
-    // reveal the scene
-    self.view.hidden = false;
-    self.view.alpha = 1;
-    
     [self removeAllChildren];
     
     [self createBackground];
@@ -151,9 +147,6 @@ static bool wasted = NO;
             // report a score to Skillz
             // NOTE: @(self.score) converts the NSInteger to NSNumber needed by the
             // api
-            self.view.hidden = true;
-            self.view.alpha = 0;
-            
             [[Skillz skillzInstance] displayTournamentResultsWithScore:@(self.score)
                                                         andScoreExtras:nil
                                                         withCompletion:nil];
