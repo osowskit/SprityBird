@@ -40,7 +40,7 @@
     // Create and configure the scene.
     scene = [Scene sceneWithSize:self.gameView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
-    scene.delegate = self;
+    scene.sceneDelegate = self;
     
     // Present the scene
     self.gameOverView.alpha = 0;

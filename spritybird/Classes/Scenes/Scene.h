@@ -15,7 +15,7 @@
 
 @interface Scene : SKScene<SKPhysicsContactDelegate>
 
-@property (unsafe_unretained,nonatomic) id<SceneDelegate> delegate;
+@property (unsafe_unretained,nonatomic) id<SceneDelegate> sceneDelegate;
 @property (nonatomic) NSInteger score;
 
 - (void) startGame;

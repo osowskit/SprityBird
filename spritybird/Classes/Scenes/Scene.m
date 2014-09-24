@@ -57,8 +57,8 @@ static bool wasted = NO;
     // Floor needs to be in front of tubes
     floor.zPosition = bird.zPosition + 1;
     
-    if([self.delegate respondsToSelector:@selector(eventStart)]){
-        [self.delegate eventStart];
+    if([self.sceneDelegate respondsToSelector:@selector(eventStart)]){
+        [self.sceneDelegate eventStart];
     }
 }
 
@@ -159,8 +159,8 @@ static bool wasted = NO;
     
     if (!bird.physicsBody) {
         [bird startPlaying];
-        if([self.delegate respondsToSelector:@selector(eventPlay)]){
-            [self.delegate eventPlay];
+        if([self.sceneDelegate respondsToSelector:@selector(eventPlay)]){
+            [self.sceneDelegate eventPlay];
         }
     }
     [bird bounce];
@@ -262,8 +262,8 @@ static bool wasted = NO;
     wasted = true;
     [Score registerScore:self.score];
 
-    if([self.delegate respondsToSelector:@selector(eventWasted)]){
-        [self.delegate eventWasted];
+    if([self.sceneDelegate respondsToSelector:@selector(eventWasted)]){
+        [self.sceneDelegate eventWasted];
     }
 }
 @end
