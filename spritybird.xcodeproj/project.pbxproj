@@ -3095,6 +3095,7 @@
 				82C6A08B18A6F53400FEBE9B /* Sources */,
 				82C6A08C18A6F53400FEBE9B /* Frameworks */,
 				82C6A08D18A6F53400FEBE9B /* Resources */,
+				BCF8D52C19D5F832008D062C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -4114,6 +4115,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BCF8D52C19D5F832008D062C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -e \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}/SkillzSDK.bundle/postprocess.sh\" ]; then\n    \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}/SkillzSDK.bundle/postprocess.sh\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		82C6A08B18A6F53400FEBE9B /* Sources */ = {
