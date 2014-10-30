@@ -244,6 +244,14 @@ static bool wasted = NO;
         if(X(topPipe) + WIDTH(topPipe)/2 > bird.position.x &&
            X(topPipe) + WIDTH(topPipe)/2 < bird.position.x + FLOOR_SCROLLING_SPEED){
             self.score +=1;
+
+            // if in a skillz game
+            if ([[Skillz skillzInstance] tournamentIsInProgress]) {
+                // report the current score as a heartbeat
+                NSLog(@"Heartbeating to Skillz");
+                [[Skillz skillzInstance] updatePlayersCurrentScore:@(self.score)];
+            }
+
             scoreLabel.text = [NSString stringWithFormat:@"%lu",self.score];
             if(self.score>=10){
                 scoreLabel.fontSize = 340;
