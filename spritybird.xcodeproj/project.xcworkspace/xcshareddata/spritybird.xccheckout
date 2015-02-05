@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2015FF7DDFB3F69933C80337BAB0278C6FF2D789</key>
-		<string>ssh://github.com/skillz/SprityBird.git</string>
+		<string>github.com:skillz/SprityBird.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>spritybird.xcodeproj/project.xcworkspace</string>
+	<string>spritybird.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2015FF7DDFB3F69933C80337BAB0278C6FF2D789</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/skillz/SprityBird.git</string>
+	<string>github.com:skillz/SprityBird.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
