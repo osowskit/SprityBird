@@ -7,9 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 #import <SkillzSDK-iOS/Skillz.h>
 
 @implementation AppDelegate
+
+#pragma mark - Skillz SDK Delegate implementation
+- (void)tournamentWillBegin:(NSDictionary *)gameParameters
+{
+    ViewController* viewController = (ViewController*) self.window.rootViewController;
+    [viewController startGame];
+}
+
+- (SkillzOrientation)preferredSkillzInterfaceOrientation
+{
+    return SkillzPortrait;
+}
+#pragma mark - End Delegate implementation
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -22,8 +36,9 @@
     
     // General Skillz initialization
     // Id is given to us by the devportal
-    [[Skillz skillzInstance] skillzInitForGameId:@"777"
-                                     environment:skillzEnv];
+    [[Skillz skillzInstance] initWithGameId:@"777"
+                                forDelegate:self
+                            withEnvironment:skillzEnv];
     
     return YES;
 }

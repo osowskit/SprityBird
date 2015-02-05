@@ -10,4 +10,6 @@
 
 @interface ViewController : UIViewController<SceneDelegate>
 
+- (void)startGame;
+
 @end

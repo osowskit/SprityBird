@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SkillzSDK-iOS/Skillz.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, SkillzDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

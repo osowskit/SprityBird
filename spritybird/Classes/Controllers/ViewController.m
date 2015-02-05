@@ -48,14 +48,15 @@
     [self.gameView presentScene:scene];
     
     // Automatically launch Skillz
-    [[Skillz skillzInstance] launchSkillzForOrientation:SkillzPortrait
-                                     launchHasCompleted:nil
-                                    tournamentWillBegin:^(NSDictionary *matchRules) {
-                                        [scene startGame];
-                                    }
-                                         skillzWillExit:nil];
+    [[Skillz skillzInstance] launchSkillz];
 }
 
+- (void)startGame
+{
+    if (scene) {
+        [scene startGame];
+    }
+}
 
 - (BOOL)prefersStatusBarHidden
 {

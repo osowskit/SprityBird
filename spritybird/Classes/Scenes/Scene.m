@@ -148,7 +148,6 @@ static bool wasted = NO;
             // NOTE: @(self.score) converts the NSInteger to NSNumber needed by the
             // api
             [[Skillz skillzInstance] displayTournamentResultsWithScore:@(self.score)
-                                                        andScoreExtras:nil
                                                         withCompletion:nil];
         } else {
             // Legacy for non-Skillz interactions
