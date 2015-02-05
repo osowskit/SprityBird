@@ -35,24 +35,9 @@
 		82C6A09318A6F53400FEBE9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6A09218A6F53400FEBE9B /* Foundation.framework */; };
 		82C6A09518A6F53400FEBE9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6A09418A6F53400FEBE9B /* CoreGraphics.framework */; };
 		82C6A09718A6F53400FEBE9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6A09618A6F53400FEBE9B /* UIKit.framework */; };
-		82C6A0B218A6F53400FEBE9B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6A0B118A6F53400FEBE9B /* XCTest.framework */; };
-		82C6A0B318A6F53400FEBE9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6A09218A6F53400FEBE9B /* Foundation.framework */; };
-		82C6A0B418A6F53400FEBE9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6A09618A6F53400FEBE9B /* UIKit.framework */; };
-		82C6A0BC18A6F53400FEBE9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82C6A0BA18A6F53400FEBE9B /* InfoPlist.strings */; };
-		82C6A0BE18A6F53400FEBE9B /* spritybirdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C6A0BD18A6F53400FEBE9B /* spritybirdTests.m */; };
 		82C6A0CB18A6FF7400FEBE9B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6A0CA18A6FF7400FEBE9B /* SpriteKit.framework */; };
 		82FEEB9418B550BF00AA6C66 /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FEEB9318B550BF00AA6C66 /* Main-iPad.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		82C6A0B518A6F53400FEBE9B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 82C6A08718A6F53400FEBE9B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 82C6A08E18A6F53400FEBE9B;
-			remoteInfo = spritybird;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		823C184318B3E57F00C9BD2F /* taptap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "taptap@2x.png"; sourceTree = "<group>"; };
@@ -90,11 +75,6 @@
 		82C6A0A718A6F53400FEBE9B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		82C6A0A818A6F53400FEBE9B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		82C6A0AA18A6F53400FEBE9B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		82C6A0B018A6F53400FEBE9B /* spritybirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spritybirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		82C6A0B118A6F53400FEBE9B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		82C6A0B918A6F53400FEBE9B /* spritybirdTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "spritybirdTests-Info.plist"; sourceTree = "<group>"; };
-		82C6A0BB18A6F53400FEBE9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		82C6A0BD18A6F53400FEBE9B /* spritybirdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = spritybirdTests.m; sourceTree = "<group>"; };
 		82C6A0C718A6FF4200FEBE9B /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		82C6A0C818A6FF4200FEBE9B /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
 		82C6A0CA18A6FF7400FEBE9B /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
@@ -114,16 +94,6 @@
 				82C6A09518A6F53400FEBE9B /* CoreGraphics.framework in Frameworks */,
 				82C6A09718A6F53400FEBE9B /* UIKit.framework in Frameworks */,
 				82C6A09318A6F53400FEBE9B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		82C6A0AD18A6F53400FEBE9B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				82C6A0B218A6F53400FEBE9B /* XCTest.framework in Frameworks */,
-				82C6A0B418A6F53400FEBE9B /* UIKit.framework in Frameworks */,
-				82C6A0B318A6F53400FEBE9B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				82C6A09818A6F53400FEBE9B /* spritybird */,
-				82C6A0B718A6F53400FEBE9B /* spritybird Tests */,
 				82C6A09118A6F53400FEBE9B /* Frameworks */,
 				82C6A09018A6F53400FEBE9B /* Products */,
 			);
@@ -175,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				82C6A08F18A6F53400FEBE9B /* spritybird.app */,
-				82C6A0B018A6F53400FEBE9B /* spritybirdTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,7 +155,6 @@
 				82C6A09218A6F53400FEBE9B /* Foundation.framework */,
 				82C6A09418A6F53400FEBE9B /* CoreGraphics.framework */,
 				82C6A09618A6F53400FEBE9B /* UIKit.framework */,
-				82C6A0B118A6F53400FEBE9B /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -211,25 +178,6 @@
 				82C6A0A018A6F53400FEBE9B /* spritybird-Prefix.pch */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		82C6A0B718A6F53400FEBE9B /* spritybird Tests */ = {
-			isa = PBXGroup;
-			children = (
-				82C6A0BD18A6F53400FEBE9B /* spritybirdTests.m */,
-				82C6A0B818A6F53400FEBE9B /* Supporting Files */,
-			);
-			name = "spritybird Tests";
-			path = spritybirdTests;
-			sourceTree = "<group>";
-		};
-		82C6A0B818A6F53400FEBE9B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				82C6A0B918A6F53400FEBE9B /* spritybirdTests-Info.plist */,
-				82C6A0BA18A6F53400FEBE9B /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		82C6A0D218A790BA00FEBE9B /* Classes */ = {
@@ -318,24 +266,6 @@
 			productReference = 82C6A08F18A6F53400FEBE9B /* spritybird.app */;
 			productType = "com.apple.product-type.application";
 		};
-		82C6A0AF18A6F53400FEBE9B /* spritybirdTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 82C6A0C418A6F53400FEBE9B /* Build configuration list for PBXNativeTarget "spritybirdTests" */;
-			buildPhases = (
-				82C6A0AC18A6F53400FEBE9B /* Sources */,
-				82C6A0AD18A6F53400FEBE9B /* Frameworks */,
-				82C6A0AE18A6F53400FEBE9B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				82C6A0B618A6F53400FEBE9B /* PBXTargetDependency */,
-			);
-			name = spritybirdTests;
-			productName = spritybirdTests;
-			productReference = 82C6A0B018A6F53400FEBE9B /* spritybirdTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -347,9 +277,6 @@
 				TargetAttributes = {
 					82C6A08E18A6F53400FEBE9B = {
 						DevelopmentTeam = DF8VM75V3Q;
-					};
-					82C6A0AF18A6F53400FEBE9B = {
-						TestTargetID = 82C6A08E18A6F53400FEBE9B;
 					};
 				};
 			};
@@ -367,7 +294,6 @@
 			projectRoot = "";
 			targets = (
 				82C6A08E18A6F53400FEBE9B /* spritybird */,
-				82C6A0AF18A6F53400FEBE9B /* spritybirdTests */,
 			);
 		};
 /* End PBXProject section */
@@ -395,14 +321,6 @@
 				576A22CE18B9CB8E001338C0 /* Main.storyboard in Resources */,
 				82457DBD18B2C3490042CF82 /* bird_3@2x.png in Resources */,
 				82457DBE18B2C3490042CF82 /* floor@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		82C6A0AE18A6F53400FEBE9B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				82C6A0BC18A6F53400FEBE9B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,23 +358,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		82C6A0AC18A6F53400FEBE9B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				82C6A0BE18A6F53400FEBE9B /* spritybirdTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		82C6A0B618A6F53400FEBE9B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 82C6A08E18A6F53400FEBE9B /* spritybird */;
-			targetProxy = 82C6A0B518A6F53400FEBE9B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		82C6A09B18A6F53400FEBE9B /* InfoPlist.strings */ = {
@@ -473,14 +375,6 @@
 				82C6A0A518A6F53400FEBE9B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		82C6A0BA18A6F53400FEBE9B /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				82C6A0BB18A6F53400FEBE9B /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -615,46 +509,6 @@
 			};
 			name = Release;
 		};
-		82C6A0C518A6F53400FEBE9B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/spritybird.app/spritybird";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "spritybird/Supporting Files/spritybird-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "spritybirdTests/spritybirdTests-Info.plist";
-				PRODUCT_NAME = spritybirdTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		82C6A0C618A6F53400FEBE9B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/spritybird.app/spritybird";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "spritybird/Supporting Files/spritybird-Prefix.pch";
-				INFOPLIST_FILE = "spritybirdTests/spritybirdTests-Info.plist";
-				PRODUCT_NAME = spritybirdTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -672,15 +526,6 @@
 			buildConfigurations = (
 				82C6A0C218A6F53400FEBE9B /* Debug */,
 				82C6A0C318A6F53400FEBE9B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		82C6A0C418A6F53400FEBE9B /* Build configuration list for PBXNativeTarget "spritybirdTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				82C6A0C518A6F53400FEBE9B /* Debug */,
-				82C6A0C618A6F53400FEBE9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
