@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10B751CE1AD430CE0082E739 /* btn_tournaments_orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B751CD1AD430CE0082E739 /* btn_tournaments_orange@2x.png */; };
+		10D297071AD31C46004AD16A /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D297061AD31C46004AD16A /* MainMenuViewController.m */; };
 		576A22CE18B9CB8E001338C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C6A0A418A6F53400FEBE9B /* Main.storyboard */; };
 		821A755618AD616C00B376D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C6A0A218A6F53400FEBE9B /* AppDelegate.m */; };
 		821A755718AD617800B376D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C6A0A818A6F53400FEBE9B /* ViewController.m */; };
@@ -40,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10B751CD1AD430CE0082E739 /* btn_tournaments_orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_tournaments_orange@2x.png"; sourceTree = "<group>"; };
+		10D297051AD31C0A004AD16A /* MainMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		10D297061AD31C46004AD16A /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		823C184318B3E57F00C9BD2F /* taptap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "taptap@2x.png"; sourceTree = "<group>"; };
 		823C184418B3E57F00C9BD2F /* get_ready@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "get_ready@2x.png"; sourceTree = "<group>"; };
 		823C184718B3F1BB00C9BD2F /* medal_silver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medal_silver@2x.png"; sourceTree = "<group>"; };
@@ -103,6 +108,7 @@
 		8274FC3318A7F14000FEBCE7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				10B751CD1AD430CE0082E739 /* btn_tournaments_orange@2x.png */,
 				823C184718B3F1BB00C9BD2F /* medal_silver@2x.png */,
 				823C184818B3F1BB00C9BD2F /* medal_gold@2x.png */,
 				823C184918B3F1BB00C9BD2F /* medal_bronze@2x.png */,
@@ -200,6 +206,8 @@
 			children = (
 				82C6A0A718A6F53400FEBE9B /* ViewController.h */,
 				82C6A0A818A6F53400FEBE9B /* ViewController.m */,
+				10D297051AD31C0A004AD16A /* MainMenuViewController.h */,
+				10D297061AD31C46004AD16A /* MainMenuViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -311,6 +319,7 @@
 				82457DC018B2C3490042CF82 /* pipe_bottom@2x.png in Resources */,
 				823C184518B3E57F00C9BD2F /* taptap@2x.png in Resources */,
 				823C184E18B3F1BB00C9BD2F /* medal_gold@2x.png in Resources */,
+				10B751CE1AD430CE0082E739 /* btn_tournaments_orange@2x.png in Resources */,
 				823C185018B3F1BB00C9BD2F /* medal_plate@2x.png in Resources */,
 				82FEEB9418B550BF00AA6C66 /* Main-iPad.storyboard in Resources */,
 				823C185218B3F1BB00C9BD2F /* medal_platinum@2x.png in Resources */,
@@ -351,6 +360,7 @@
 				821A755718AD617800B376D5 /* ViewController.m in Sources */,
 				821A755818AD617800B376D5 /* Scene.m in Sources */,
 				821A755918AD617800B376D5 /* SKScrollingNode.m in Sources */,
+				10D297071AD31C46004AD16A /* MainMenuViewController.m in Sources */,
 				82B99B4618B132B40099A4FE /* Score.m in Sources */,
 				82B99B4218B1301F0099A4FE /* BirdNode.m in Sources */,
 				821A755D18AD617800B376D5 /* Math.m in Sources */,
