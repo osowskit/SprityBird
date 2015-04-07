@@ -15,13 +15,18 @@
 #pragma mark - Skillz SDK Delegate implementation
 - (void)tournamentWillBegin:(NSDictionary *)gameParameters
 {
-    ViewController* viewController = (ViewController*) self.window.rootViewController;
+    ViewController* viewController = (ViewController*) self.window.rootViewController.modalViewController;
     [viewController startGame];
 }
 
 - (SkillzOrientation)preferredSkillzInterfaceOrientation
 {
     return SkillzPortrait;
+}
+
+- (void)skillzWillExit
+{
+    [self.window.rootViewController dismissViewControllerAnimated:YES completion:^(void){}];
 }
 #pragma mark - End Delegate implementation
 
