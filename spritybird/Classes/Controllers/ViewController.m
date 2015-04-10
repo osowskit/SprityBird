@@ -83,10 +83,6 @@
     [UIView animateWithDuration:.5 animations:^{
         self.getReadyView.alpha = 0;
     }];
-
-    // hack to avoid problems with game view on a device
-    flash = [[UIView alloc] initWithFrame:self.view.frame];
-    [self.gameView insertSubview:flash belowSubview:self.getReadyView];
 }
 
 - (void)eventWasted
