@@ -47,6 +47,10 @@
     
     return YES;
 }
+- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
