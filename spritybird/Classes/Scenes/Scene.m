@@ -43,6 +43,13 @@ static bool wasted = NO;
 
 - (void) startGame
 {
+    SKZPlayer *player = [Skillz player];
+    if (player) {
+        NSLog(@"TestPlayer %@ %@ %@ %@", player.id, player.displayName, player.flagURL, player.avatarURL);
+    } else {
+        NSLog(@"TestPlayer nil");
+    }
+    
     // Reinit
     wasted = NO;
     
