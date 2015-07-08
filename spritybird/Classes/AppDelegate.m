@@ -14,6 +14,7 @@
 
 #pragma mark - Skillz SDK Delegate implementation
 - (void)tournamentWillBegin:(NSDictionary *)gameParameters
+              withMatchInfo:(SKZMatchInfo *)matchInfo
 {
     ViewController* viewController = (ViewController*) self.window.rootViewController.modalViewController;
     [viewController startGame];
