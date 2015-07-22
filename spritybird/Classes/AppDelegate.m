@@ -14,7 +14,20 @@
 
 #pragma mark - Skillz SDK Delegate implementation
 - (void)tournamentWillBegin:(NSDictionary *)gameParameters
+              withMatchInfo:(SKZMatchInfo *)matchInfo
 {
+    NSLog(@"Test Match Info matchId:%ld description:%@ entryCash:%@ entryPoints:%@ isCash:%d name:%@ templateId:%@",
+          matchInfo.id,
+          matchInfo.matchDescription,
+          matchInfo.entryCash,
+          matchInfo.entryPoints,
+          matchInfo.isCash,
+          matchInfo.name,
+          matchInfo.templateId);
+    
+    SKZPlayer *player = matchInfo.player;
+    NSLog(@"TestPlayer %@ %@ %@ %@", player.id, player.displayName, player.flagURL, player.avatarURL);
+    
     ViewController* viewController = (ViewController*) self.window.rootViewController.modalViewController;
     [viewController startGame];
 }
@@ -27,6 +40,18 @@
 - (void)skillzWillExit
 {
     [self.window.rootViewController dismissViewControllerAnimated:YES completion:^(void){}];
+}
+
+- (void) skillzHasFinishedLaunching
+{
+    NSLog(@"Skillz launched");
+    
+    SKZPlayer *player = [Skillz player];
+    if (player) {
+        NSLog(@"TestPlayer %@ %@ %@ %@", player.id, player.displayName, player.flagURL, player.avatarURL);
+    } else {
+        NSLog(@"TestPlayer nil");
+    }
 }
 #pragma mark - End Delegate implementation
 
@@ -44,6 +69,13 @@
     [[Skillz skillzInstance] initWithGameId:@"777"
                                 forDelegate:self
                             withEnvironment:skillzEnv];
+    
+    SKZPlayer *player = [Skillz player];
+    if (player) {
+        NSLog(@"TestPlayer %@ %@ %@ %@", player.id, player.displayName, player.flagURL, player.avatarURL);
+    } else {
+        NSLog(@"TestPlayer nil");
+    }
     
     return YES;
 }
