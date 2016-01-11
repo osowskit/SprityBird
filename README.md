@@ -8,4 +8,4 @@ This project is a small clone of Flappy Bird for iOS using SpriteKit framework. 
 
 This project is setup to work with the latest version of the Skillz iOS SDK, which can be found at [https://skillz.com/developer/downloads](https://skillz.com/developer/downloads).
 
-Once the SDK is downloaded, the Skillz embedded framework will need to be added to the project. For additional SDK installation details refer to the [Skillz documentation](https://skillz.com/developer/docs/install_framework_ios).
+Once the SDK is downloaded, the Skillz embedded framework will need to be added to the project. For additional SDK installation details refer to the [Skillz documentation](https://cdn.skillz.com/doc/developer/).
