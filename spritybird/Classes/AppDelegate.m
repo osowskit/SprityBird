@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import <SkillzSDK-iOS/Skillz.h>
+#import <Skillz/Skillz.h>
 
 @implementation AppDelegate
 

@@ -347,7 +347,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -e \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}/SkillzSDK.bundle/postprocess.sh\" ]; then\n    \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}/SkillzSDK.bundle/postprocess.sh\"\nfi\n";
+			shellScript = "if [ -e \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Skillz.framework/postprocess.sh\" ]; then\n/bin/sh \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Skillz.framework/postprocess.sh\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -484,12 +484,22 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SkillzSDK-iOS.embeddedframework",
+					"$(PROJECT_DIR)/Skillz.framework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "spritybird/Supporting Files/spritybird-Prefix.pch";
 				INFOPLIST_FILE = "spritybird/Supporting Files/spritybird-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-ObjC",
+					"-lc++",
+					"-lz",
+					"-lsqlite3",
+					"-lxml2",
+					"-weak_framework",
+					PassKit,
+				);
 				PRODUCT_NAME = spritybird;
 				PROVISIONING_PROFILE = "9D8D269D-A928-405C-AC51-49A8C6450DAD";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -506,12 +516,22 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SkillzSDK-iOS.embeddedframework",
+					"$(PROJECT_DIR)/Skillz.framework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "spritybird/Supporting Files/spritybird-Prefix.pch";
 				INFOPLIST_FILE = "spritybird/Supporting Files/spritybird-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-ObjC",
+					"-lc++",
+					"-lz",
+					"-lsqlite3",
+					"-lxml2",
+					"-weak_framework",
+					PassKit,
+				);
 				PRODUCT_NAME = spritybird;
 				PROVISIONING_PROFILE = "02D30777-8BE4-45D0-82A4-B151DF37B1F9";
 				TARGETED_DEVICE_FAMILY = 1;

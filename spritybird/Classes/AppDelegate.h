@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SkillzSDK-iOS/Skillz.h>
+#import <Skillz/Skillz.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, SkillzDelegate>
 
